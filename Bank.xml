@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Bank.xslt"?>
+<Bank xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<Accounts>
+		<Standard Number="43768" Balance="3298.50"/>
+		<Floored Number="71309" Balance="4304.00" Floor="-1000.00"/>
+		<Remunerated Number="11402" Balance="10380.00" InterestRate="4.50"/>
+		<RemuneratedFloored Number="65993" Balance="32654.00" Floor="2000.00" InterestRate="8.00"/>
+		<Standard Number="42877" Balance="6670.43"/>
+		<Floored Number="86216" Balance="2069.70" Floor="-1500.00"/>
+		<Remunerated Number="97462" Balance="7850.00" InterestRate="4.50"/>
+		<RemuneratedFloored Number="78143" Balance="22564.40" Floor="-2000.00" InterestRate="6.85"/>
+		<Remunerated Number="21874" Balance="8549.34" InterestRate="4.50"/>
+		<Standard Number="39561" Balance="320.43"/>
+	</Accounts>
+	<Clients>
+		<Client Forename="John" Surname="Smith" DateOfBirth="1967-11-03">
+			<Addresses>
+				<Address Type="private">
+					<Line>Chalbert Court</Line>
+					<Line>Chalbert Street</Line>
+					<District>St John's Wood</District>
+					<City>London</City>
+					<ZipCode>NW8 7BY</ZipCode>
+				</Address>
+				<Address Type="professional">
+					<Line>3a Harrington Road</Line>
+					<District>South Kensington</District>
+					<City>London</City>
+					<ZipCode>SW7 3ES</ZipCode>
+				</Address>
+			</Addresses>
+			<AccountRefs>
+				<AccountRef Ref="11402"/>
+				<AccountRef Ref="43768"/>
+				<AccountRef Ref="65993"/>
+				<AccountRef Ref="71309"/>
+			</AccountRefs>
+		</Client>
+		<Client Forename="Jack" Surname="Brown" DateOfBirth="1979-03-26">
+			<Addresses>
+				<Address Id="JackTracyBrown" Type="private">
+					<Line>7 Combe Road</Line>
+					<District>Tilehurst</District>
+					<City>Reading</City>
+					<County>Berkshire</County>
+					<ZipCode>RG30 4LS</ZipCode>
+				</Address>
+			</Addresses>
+			<AccountRefs>
+				<AccountRef Ref="42877"/>
+				<AccountRef Ref="78143"/>
+				<AccountRef Ref="86216"/>
+				<AccountRef Ref="97462"/>
+			</AccountRefs>
+		</Client>
+		<Client Forename="Tracy" Surname="Brown" DateOfBirth="1981-05-17">
+			<Addresses>
+				<AddressRef Ref="JackTracyBrown"/>
+			</Addresses>
+			<AccountRefs>
+				<AccountRef Ref="42877"/>
+				<AccountRef Ref="86216"/>
+			</AccountRefs>
+		</Client>
+		<Client Forename="Alison" Surname="Cooper" DateOfBirth="1986-08-12">
+			<Addresses>
+				<Address Type="private">
+					<Line>35 St Peters Wharf</Line>
+					<City>Newcastle Upon Tyne</City>
+					<County>Tyne and Wear</County>
+					<ZipCode>NE6 3EL</ZipCode>
+				</Address>
+			</Addresses>
+			<AccountRefs>
+				<AccountRef Ref="21874"/>
+				<AccountRef Ref="39561"/>
+			</AccountRefs>
+		</Client>
+	</Clients>
+</Bank>
